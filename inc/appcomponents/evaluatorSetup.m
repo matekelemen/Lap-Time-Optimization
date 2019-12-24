@@ -1,0 +1,16 @@
+function settings = evaluatorSetup(settings)
+    % settings = evaluatorSetup(settings)
+    
+    if isempty(settings)
+        settings = {    'objectiveMultiplier',  '1.0';                  ...
+                        'startVelocity',        '0.0';                  ...
+                        'nSubdivisions',        '10'    };
+    else
+        settings(:,2) = inputdlg(   settings(:,1),                      ...
+                                    'Evaluator settings (see the docs)',...
+                                    [1,30],                             ...
+                                    settings(:,2)   );
+    end
+
+
+end
